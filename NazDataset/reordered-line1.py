@@ -1,0 +1,2 @@
+void A() {}
+void B() {}
