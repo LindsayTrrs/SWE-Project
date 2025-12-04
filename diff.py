@@ -148,6 +148,37 @@ def main():
     removes = []
     inserts = []
     
+    for elem in diff:
+        if isinstance(elem, Keep):
+            line_mapping.append((old_line, new_line))
+            old_line += 1
+            new_line += 1
+            
+        elif isinstance(elem, Remove):
+            removed_line = elem.line
+            
+            # see if an deleted line matches this inserted line
+            match = None
+            
+            for i, (insert_line, insert_line_num) in enumerate(inserts):
+                if insert_line == removed_line:
+                    match = i
+                    break
+                
+            if match is not None:
+                # then its a moved line, add it to mapping
+                insert_line, insert_line_num = inserts.pop(match)
+                line_mapping.append((old_line, insert_line_num))
+            else:
+                # no match with deleted line yet, store it
+                removes.append((removed_line, old_line))
+            
+            old_line += 1
+
+        elif isinstance(elem, Insert):
+            print('INSERTED: ' + elem.line)
+
+    
     ########################################################################################################################
 
 if __name__ == '__main__':
