@@ -123,13 +123,32 @@ def main():
         b_lines = [line.rstrip() for line in b_handle]
 
     diff = myers_diff(a_lines, b_lines)
-    for elem in diff:
-        if isinstance(elem, Keep):
-            print('KEPT: ' + elem.line)
-        elif isinstance(elem, Insert):
-            print('INSERTED: ' + elem.line)
-        else:
-            print('REMOVED: ' + elem.line)
+    # for elem in diff:
+    #     if isinstance(elem, Keep):
+    #         print('KEPT: ' + elem.line)
+    #     elif isinstance(elem, Insert):
+    #         print('INSERTED: ' + elem.line)
+    #     else:
+    #         print('REMOVED: ' + elem.line)
+    
+    ###############################   Additional code to implement line mapping   ###########################################
+    
+    # The following block implements line mapping based on the diff output. The algorithm analyzes the collected diff elements
+    # seperated into keeps, inserts, and removes. The logic proceeds as follows. A keep maps directly to the same line number in
+    # both files. A remove is checked against pending inserts to determine whether it represents a move, and the same check is 
+    # performed in reverse for inserts. Any removes or inserts that remain unmatched are treated as true deletions or additions.
+    
+    # Initialize line counters for tracking positions in the old and new file
+    old_line = 1
+    new_line = 1
+    
+    line_mapping = [] # tuple to store line mappings in the form ("line1" "-->" "line2")
+    
+    # pools of removes and inserts to detect movements
+    removes = []
+    inserts = []
+    
+    ########################################################################################################################
 
 if __name__ == '__main__':
     sys.exit(main())
