@@ -125,11 +125,11 @@ def main():
     diff = myers_diff(a_lines, b_lines)
     for elem in diff:
         if isinstance(elem, Keep):
-            print(' ' + elem.line)
+            print('KEPT: ' + elem.line)
         elif isinstance(elem, Insert):
-            print('+' + elem.line)
+            print('INSERTED: ' + elem.line)
         else:
-            print('-' + elem.line)
+            print('REMOVED: ' + elem.line)
 
 if __name__ == '__main__':
     sys.exit(main())
