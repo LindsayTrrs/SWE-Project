@@ -204,7 +204,8 @@ def main():
         line_mapping.append((-1, insert_line_num)) 
 
     mapping = line_mapping
-    print(line_mapping)
+    for item in line_mapping:
+        print(' --> '.join(map(str, item)))
     ########################################################################################################################
 
 if __name__ == '__main__':
