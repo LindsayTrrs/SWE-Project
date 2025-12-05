@@ -195,6 +195,13 @@ def main():
                 inserts.append((inserted_line, new_line))
             
             new_line += 1
+            
+    # leftover deletes or inserts with no moves
+    for deleted_line, deleted_line_num in removes:
+        line_mapping.append((deleted_line_num, -1))   
+        
+    for deleted_line, deleted_line_num in removes:
+        line_mapping.append((-1, insert_line_num)) 
 
     ########################################################################################################################
 
