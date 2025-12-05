@@ -200,7 +200,7 @@ def main():
     for deleted_line, deleted_line_num in removes:
         line_mapping.append((deleted_line_num, -1))   
         
-    for deleted_line, deleted_line_num in removes:
+    for insert_line, insert_line_num in inserts:
         line_mapping.append((-1, insert_line_num)) 
 
     ########################################################################################################################
