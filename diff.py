@@ -203,6 +203,8 @@ def main():
     for insert_line, insert_line_num in inserts:
         line_mapping.append((-1, insert_line_num)) 
 
+    mapping = line_mapping
+    print(line_mapping)
     ########################################################################################################################
 
 if __name__ == '__main__':
