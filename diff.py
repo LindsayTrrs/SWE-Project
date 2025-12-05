@@ -185,14 +185,16 @@ def main():
                 if deleted_line == inserted_line:
                     match = i
                     break 
+                
             if match is not None:
                     #then its a moved line, add it to mapping
                     deleted_line, deleted_line_num = removes.pop(match)
                     line_mapping.append((deleted_line_num, new_line))
-                else:
-                    # no match w del line yet, store it 
-                    inserts.append((inserted_line, new_line))
-                new_line += 1
+            else:
+                # no match w del line yet, store it 
+                inserts.append((inserted_line, new_line))
+            
+            new_line += 1
 
     ########################################################################################################################
 
