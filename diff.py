@@ -198,10 +198,10 @@ def main():
             
     # leftover deletes or inserts with no moves
     for deleted_line, deleted_line_num in removes:
-        line_mapping.append((deleted_line_num, -1))   
+        line_mapping.append((deleted_line_num, 'removed'))   
         
     for insert_line, insert_line_num in inserts:
-        line_mapping.append((-1, insert_line_num)) 
+        line_mapping.append(('inserted', insert_line_num)) 
 
     mapping = line_mapping
     for item in line_mapping:
