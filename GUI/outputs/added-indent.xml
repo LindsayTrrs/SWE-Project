@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<line_mapping>
+  <metadata>
+    <timestamp>2024-01-01 12:00:00</timestamp>
+    <tool>File Line Mapper</tool>
+  </metadata>
+  <files>
+    <file id="1" name="added-indent1.py" path="uploads\added-indent1.py" line_count="2"/>
+    <file id="2" name="added-indent2.py" path="uploads\added-indent2.py" line_count="2"/>
+  </files>
+  <mappings>
+    <mapping index="1">
+      <source_line file_id="1" file_name="added-indent1.py" line_number="1">if x:</source_line>
+      <target_line file_id="2" file_name="added-indent2.py" line_number="1">if x:</target_line>
+      <comparison result="exact_match" confidence="100">Lines are identical</comparison>
+    </mapping>
+    <mapping index="2">
+      <source_line file_id="1" file_name="added-indent1.py" line_number="2">    y = 10</source_line>
+      <target_line file_id="2" file_name="added-indent2.py" line_number="2">        y = 10</target_line>
+      <comparison result="similar" confidence="90">Lines differ only in whitespace</comparison>
+    </mapping>
+  </mappings>
+  <summary>
+    <total_lines_compared>2</total_lines_compared>
+    <exact_matches>1</exact_matches>
+    <similar_matches>1</similar_matches>
+    <differences>0</differences>
+    <unpaired_lines>0</unpaired_lines>
+    <similarity_score>95.0%</similarity_score>
+  </summary>
+</line_mapping>

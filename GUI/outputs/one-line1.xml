@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<line_mapping>
+  <files>
+    <file name="one-line1.py" line_count="3"/>
+    <file name="one-line2.py" line_count="3"/>
+  </files>
+  <mappings>
+    <mapping index="1" match="different">
+      <line file="one-line1.py" number="1">if (x = 5) {</line>
+      <line file="one-line2.py" number="1">if (x == 5) { </line>
+    </mapping>
+    <mapping index="2" match="exact">
+      <line file="one-line1.py" number="2">    print("test")</line>
+      <line file="one-line2.py" number="2">    print("test")</line>
+    </mapping>
+    <mapping index="3" match="exact">
+      <line file="one-line1.py" number="3">}</line>
+      <line file="one-line2.py" number="3">}</line>
+    </mapping>
+  </mappings>
+</line_mapping>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<line_mapping>
+  <metadata>
+    <timestamp>2024-01-01 12:00:00</timestamp>
+    <tool>File Line Mapper</tool>
+  </metadata>
+  <files>
+    <file id="1" name="moved_code1.c" path="uploads\moved_code1.c" line_count="15"/>
+    <file id="2" name="moved_code2.c" path="uploads\moved_code2.c" line_count="15"/>
+  </files>
+  <mappings>
+    <mapping index="1">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="1">#include &lt;stdio.h&gt;</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="1">#include &lt;stdio.h&gt;</target_line>
+      <comparison result="exact_match" confidence="100">Lines are identical</comparison>
+    </mapping>
+    <mapping index="2">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="2"/>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="2"/>
+      <comparison result="exact_match" confidence="100">Lines are identical</comparison>
+    </mapping>
+    <mapping index="3">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="3">void printHello() {</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="3">int main() {</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="4">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="4">    printf("Hello!\n");</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="4">    printHello();</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="5">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="5">}</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="5">    printGoodbye();</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="6">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="6"/>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="6">    return 0;</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="7">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="7">void printGoodbye() {</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="7">}</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="8">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="8">    printf("Goodbye!\n");</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="8"/>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="9">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="9">}</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="9">void printHello() {</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="10">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="10"/>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="10">    printf("Hello!\n");</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="11">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="11">int main() {</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="11">}</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="12">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="12">    printHello();</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="12"/>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="13">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="13">    printGoodbye();</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="13">void printGoodbye() {</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="14">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="14">    return 0;</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="14">    printf("Goodbye!\n");</target_line>
+      <comparison result="different" confidence="0">Lines have different content</comparison>
+    </mapping>
+    <mapping index="15">
+      <source_line file_id="1" file_name="moved_code1.c" line_number="15">}</source_line>
+      <target_line file_id="2" file_name="moved_code2.c" line_number="15">}</target_line>
+      <comparison result="exact_match" confidence="100">Lines are identical</comparison>
+    </mapping>
+  </mappings>
+  <summary>
+    <total_lines_compared>15</total_lines_compared>
+    <exact_matches>3</exact_matches>
+    <similar_matches>0</similar_matches>
+    <differences>12</differences>
+    <unpaired_lines>0</unpaired_lines>
+    <similarity_score>20.0%</similarity_score>
+  </summary>
+</line_mapping>
